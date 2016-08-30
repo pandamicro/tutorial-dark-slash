@@ -172,21 +172,21 @@ cc.Class({
     },
 
     dead () {
-        if (this.invincible) return;
-        this.node.emit('freeze');
-        this.isAlive = false;
-        this.isAttacking = false;
-        this.inputEnabled = false;
-        this.anim.play('dead');
+        // if (this.invincible) return;
+        // this.node.emit('freeze');
+        // this.isAlive = false;
+        // this.isAttacking = false;
+        // this.inputEnabled = false;
+        // this.anim.play('dead');
     },
 
     corpse () {
-        this.anim.play('corpse');
-        this.scheduleOnce(this.death, 0.7);
+        // this.anim.play('corpse');
+        // this.scheduleOnce(this.death, 0.7);
     },
 
     death () {
-        this.game.death();
+        // this.game.death();
     },
     
     shouldStopAttacking () {

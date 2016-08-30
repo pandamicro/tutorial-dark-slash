@@ -18,50 +18,46 @@ cc.Class({
 
     // use this for initialization
     init () {
+        this.fPools = [];
         for (let i = 0; i < this.foePools.length; ++i) {
-            this.foePools[i].init();
+            // this.foePools[i].init();
+            this.fPools.push(new cc.NodePool());
         }
 
+        this.pPools = [];
         for (let i = 0; i < this.projectilePools.length; ++i) {
-            this.projectilePools[i].init();
+            // this.projectilePools[i].init();
+            this.pPools.push(new cc.NodePool());
         }
     },
 
     requestFoe (foeType) {
-        let thePool = this.foePools[foeType];
-        if (thePool.idx >= 0) {
-            return thePool.request();
-        } else {
-            return null;
-        }
+        let thePool = this.fPools[foeType];
+        let prefab = this.foePools[foeType].prefab;
+        var foe = thePool.get() || cc.instantiate(prefab);
+        if (foe)
+            foe.active = true;
+        return foe;
     },
 
     returnFoe (foeType, obj) {
-        let thePool = this.foePools[foeType];
-        if (thePool.idx < thePool.size) {
-            thePool.return(obj);
-        } else {
-            cc.log('Return obj to a full pool, something has gone wrong');
-            return;
-        }
+        let thePool = this.fPools[foeType];
+        obj.active = false;
+        thePool.put(obj);
     },
 
     requestProjectile (type) {
-        let thePool = this.projectilePools[type];
-        if (thePool.idx >= 0) {
-            return thePool.request();
-        } else {
-            return null;
-        }
+        let thePool = this.pPools[type];
+        let prefab = this.projectilePools[type].prefab;
+        var projectile = thePool.get() || cc.instantiate(prefab);
+        if (projectile)
+            projectile.active = true;
+        return projectile;
     },
 
     returnProjectile (type, obj) {
-        let thePool = this.projectilePools[type];
-        if (thePool.idx < thePool.size) {
-            thePool.return(obj);
-        } else {
-            cc.log('Return obj to a full pool, something has gone wrong');
-            return;
-        }
+        let thePool = this.pPools[type];
+        obj.active = false;
+        thePool.put(obj);
     }
 });
