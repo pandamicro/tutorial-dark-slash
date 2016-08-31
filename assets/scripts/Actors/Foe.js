@@ -97,9 +97,10 @@ cc.Class({
     },
 
     readyToMove () {
-        this.isAlive = true;
-        this.isMoving = true;
+        // this.isAlive = true;
+        // this.isMoving = true;
         this.fxSmoke.resetSystem();
+        this.scheduleOnce(this.recycle, 1);
     },
 
     prepAttack (dir) {

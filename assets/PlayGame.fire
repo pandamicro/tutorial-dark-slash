@@ -11228,8 +11228,8 @@
   {
     "__type__": "Spawn",
     "foeType": 0,
-    "total": 100,
-    "spawnInterval": 3,
+    "total": 2000,
+    "spawnInterval": 0.1,
     "isCompany": false
   },
   {
