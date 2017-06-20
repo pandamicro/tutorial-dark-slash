@@ -4,7 +4,9 @@ cc.Class({
     properties: {
         particleToPlay: cc.ParticleSystem,
         finishHandler: cc.Component.EventHandler,
-        fireHandler: cc.Component.EventHandler
+        fireHandler: cc.Component.EventHandler,
+        
+        nodes: [cc.Node]
     },
 
     // use this for initialization

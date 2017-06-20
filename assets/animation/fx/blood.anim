@@ -3,7 +3,7 @@
   "_name": "blood",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 1.3333333333333333,
+  "_duration": 1.4,
   "sample": 15,
   "speed": 1,
   "wrapMode": 1,
@@ -130,9 +130,39 @@
             "value": {
               "__uuid__": "a0cea543-c214-4255-a118-38f33f817be9"
             }
+          },
+          {
+            "frame": 1.3333333333333333,
+            "value": {
+              "__uuid__": "a0cea543-c214-4255-a118-38f33f817be9"
+            }
           }
         ]
       }
+    },
+    "props": {
+      "position": [
+        {
+          "frame": 0,
+          "value": [
+            0,
+            0
+          ],
+          "curve": [
+            -0.05,
+            0.48,
+            1.09,
+            0.05
+          ]
+        },
+        {
+          "frame": 1.3333333333333333,
+          "value": [
+            100,
+            100
+          ]
+        }
+      ]
     }
   },
   "events": []
