@@ -1,9 +1,10 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.2.0",
   "uuid": "da7e4ec1-b6bb-48a2-b4a5-be0b376c7a2c",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
     "home_c_zombie_3": {
       "ver": "1.0.3",

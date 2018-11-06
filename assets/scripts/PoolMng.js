@@ -41,9 +41,10 @@ cc.Class({
     },
 
     returnFoe (foeType, obj) {
-        let thePool = this.fPools[foeType];
         obj.active = false;
+        let thePool = this.fPools[foeType];
         thePool.put(obj);
+        // obj.parent = null;
     },
 
     requestProjectile (type) {
@@ -56,8 +57,9 @@ cc.Class({
     },
 
     returnProjectile (type, obj) {
-        let thePool = this.pPools[type];
         obj.active = false;
+        let thePool = this.pPools[type];
         thePool.put(obj);
+        // obj.parent = null;
     }
 });

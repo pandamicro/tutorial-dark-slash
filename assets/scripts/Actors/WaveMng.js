@@ -77,6 +77,8 @@ cc.Class({
         this.waveProgress.init(this);
         this.bossProgress = this.bossProgress.getComponent('BossProgress');
         this.bossProgress.init(this);
+
+        window.waveMng = this;
     },
 
 

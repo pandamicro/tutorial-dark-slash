@@ -1,9 +1,10 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.2.0",
   "uuid": "0819d5e0-ded2-4006-ac6b-1b3bff2b5bc9",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
     "over_icon_boss2_on": {
       "ver": "1.0.3",
